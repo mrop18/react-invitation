@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&display=swap');
+@import "tailwindcss";
+
+:root {
+  font-family: 'Tiro Devanagari Hindi', serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f5f8ed;
+  color: #27472a;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.floral-corner {
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  opacity: 0.24;
+  background: radial-gradient(circle at center, #e7c56f 0%, #c89a3d 45%, transparent 68%);
+  filter: blur(0.3px);
+}
+
+@media (max-width: 640px) {
+  .floral-corner {
+    width: 5.2rem;
+    height: 5.2rem;
+    opacity: 0.2;
+  }
+}
+
+.floral-top-left {
+  top: 0;
+  left: 0;
+  transform: translate(-28%, -28%);
+}
+
+.floral-top-right {
+  top: 0;
+  right: 0;
+  transform: translate(28%, -28%) rotate(90deg);
+}
+
+.floral-bottom-left {
+  bottom: 0;
+  left: 0;
+  transform: translate(-30%, 30%) rotate(-90deg);
+}
+
+.floral-bottom-right {
+  bottom: 0;
+  right: 0;
+  transform: translate(30%, 30%) rotate(180deg);
+}
+
+.countdown-pulse {
+  animation: countdownPulse 2.8s ease-in-out infinite;
+}
+
+@keyframes countdownPulse {
+  0%,
+  100% {
+    box-shadow: 0 10px 20px rgba(76, 95, 43, 0.17);
+    transform: translateY(0);
+  }
+  50% {
+    box-shadow: 0 14px 24px rgba(101, 124, 56, 0.28);
+    transform: translateY(-2px);
+  }
+}
